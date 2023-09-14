@@ -1,4 +1,3 @@
---Insertar tres ciudades de argentina a elección en un solo insert 
-insert into user (id, username, password)
-values (1, 'Anabelle', 'pass'), (2, 'Mariana', 'pass2'), (3, 'Diego', 'pass3'), (4, 'Diana', 'pass4');
- 
+-- Insertar tres ciudades de argentina a elección en un solo insert 
+INSERT INTO city (city, country_id)
+VALUES ('Bolivar',(SELECT country_id FROM country WHERE country LIKE 'Argentina%')), ('Junin',(SELECT country_id FROM country WHERE country LIKE 'Argentina%')), ('Rivadavia',(SELECT country_id FROM country WHERE country LIKE 'Argentina%')); 
